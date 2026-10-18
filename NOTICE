@@ -1,4 +1,5 @@
-Required Notice: Copyright (c) 2026 lq201220 (https://github.com/lq201220)
+Copyright (c) 2026 lq201220 (https://github.com/lq201220)
 
-本项目自身代码依根目录 LICENSE 所载 PolyForm Noncommercial 1.0.0 提供。
-商业使用须取得权利人的单独书面授权。第三方组件的版权及许可见 THIRD_PARTY_NOTICES.md。
+本项目原创代码及文档采用根目录 LICENSE 中的《防消助手个人学习许可协议 1.0》。
+仅允许协议范围内的个人非商业学习、研究和本机测试；机构使用、对外服务及商业使用须另获书面授权。
+第三方组件继续适用各自许可，详见 THIRD_PARTY_NOTICES.md。

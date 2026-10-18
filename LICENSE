@@ -1,73 +1,39 @@
-# PolyForm Noncommercial License 1.0.0
+防消助手个人学习许可协议 1.0
+生效版本：包含本协议的版本；发布日期：2026-10-18
+Copyright (c) 2026 lq201220 (https://github.com/lq201220)
 
-<https://polyformproject.org/licenses/noncommercial/1.0.0>
+本协议仅适用于权利人有权许可的本项目原创代码及文档。本项目为“源码公开、限制使用”，不属于允许自由使用和分发的开源软件。除本协议明确授予的权利、另行书面授权以及法律或适用平台条款规定的权利外，其他权利均由权利人保留。
 
-## Acceptance
+一、个人学习授权
+仅向以本人名义、独立行事的自然人授予非独占、不可转让且不可再许可的有限授权：为个人非商业学习、研究和本机测试之目的，下载、阅读、在个人设备上运行源码，以及为上述目的在本机修改源码。
+上述授权不包括为单位、机构或他人完成工作、项目、业务或交付，不包括面向组织开展教学、培训或机构研究。以个人账号操作、免费提供或没有盈利，并不使这些活动成为获准的个人使用。
 
-In order to get any license under these terms, you must agree to them as both strict obligations and conditions to all your licenses.
+二、机构使用须单独授权
+学校及其他教育机构、政府机关及事业单位、企业、社会组织、公益和慈善组织、公共研究机构、公共安全或卫生机构等任何组织，未经权利人事先单独书面授权，不得使用本软件进行部署、运行、集成、教学培训、机构研究、内部管理、项目实施或实际业务办理。
+此限制同样适用于组织的工作人员、学生、承包商及其他人员代表组织进行的上述活动，不因组织是否营利、是否收费、是否具有公益性质或是否使用公共资金而豁免。个人符合第一条的独立学习不因其具有上述身份而被一概禁止。
 
-## Copyright License
+三、其他须单独授权的用途
+未经权利人事先单独书面授权，不得：
+1. 将本软件或其修改版用于任何商业活动，包括销售、收费服务、商业项目交付、受托开发、商业产品集成以及为商业活动提供支持。
+2. 部署为面向他人的网站、App、SaaS、API 或其他在线服务，或者向他人提供实际业务服务；免费服务亦不例外。
+3. 在本协议明确允许及适用平台条款要求的范围之外，重新分发源码、修改版、安装包或其他构建产物，或者向他人授予使用许可。
+4. 删除或篡改版权、许可及第三方声明，或声称本软件允许自由商用或任意机构使用。
 
-The licensor grants you a copyright license for the software to do everything you might do with the software that would otherwise infringe the licensor's copyright in it for any permitted purpose.  However, you may only distribute the software according to [Distribution License](#distribution-license) and make changes or new works based on the software according to [Changes and New Works License](#changes-and-new-works-license).
+四、公开仓库与平台权利
+本仓库公开展示不代表授予机构使用、生产部署、商业使用或任意分发的权利。本协议不限制 GitHub 等适用平台条款授予用户的查看及站内 Fork 权利；站内 Fork 本身不授予超出本协议范围的使用权。依法享有且不得排除的权利不受本协议限制。
+下载、保留本协议允许的副本或进行站内 Fork 时，应保留本协议及原有版权、许可和第三方声明。
 
-## Distribution License
+五、第三方组件
+第三方代码、依赖及资源仍受各自原有许可证约束，其声明见 THIRD_PARTY_NOTICES.md 及相应组件的许可文件。本协议不改变或缩减第三方权利人已授予的权利，也不声称权利人拥有第三方组件的版权。
 
-The licensor grants you an additional copyright license to distribute copies of the software.  Your license to distribute covers distributing the software with changes and new works permitted by [Changes and New Works License](#changes-and-new-works-license).
+六、单独授权
+本协议之外的使用须事先取得权利人的明确书面授权，授权范围以该书面文件为准。可通过项目 GitHub 仓库 Issue 联系维护者咨询；发起咨询、未收到回复或仓库保持公开，均不构成授权。
 
-## Notices
+七、违约与终止
+违反本协议时，本协议授予的有限许可终止，应停止不被允许的使用，并依法处理侵权副本；依法不可排除的权利以及第三方许可证赋予的独立权利不因此终止。权利人保留依法主张救济的权利。
 
-You must ensure that anyone who gets a copy of any part of the software from you also gets a copy of these terms or the URL for them above, as well as copies of any plain-text lines beginning with `Required Notice:` that the licensor provided with the software.  For example:
+八、免责
+在法律允许范围内，本软件按现状提供，不作任何明示或默示担保。权利人不对软件的适用性、准确性、持续可用性或使用造成的损失作保证或承担法律允许排除的责任。本条不排除依法不得排除的责任。
 
-> Required Notice: Copyright Yoyodyne, Inc. (http://example.com)
-
-## Changes and New Works License
-
-The licensor grants you an additional copyright license to make changes and new works based on the software for any permitted purpose.
-
-## Patent License
-
-The licensor grants you a patent license for the software that covers patent claims the licensor can license, or becomes able to license, that you would infringe by using the software.
-
-## Noncommercial Purposes
-
-Any noncommercial purpose is a permitted purpose.
-
-## Personal Uses
-
-Personal use for research, experiment, and testing for the benefit of public knowledge, personal study, private entertainment, hobby projects, amateur pursuits, or religious observance, without any anticipated commercial application, is use for a permitted purpose.
-
-## Noncommercial Organizations
-
-Use by any charitable organization, educational institution, public research organization, public safety or health organization, environmental protection organization, or government institution is use for a permitted purpose regardless of the source of funding or obligations resulting from the funding.
-
-## Fair Use
-
-You may have "fair use" rights for the software under the law. These terms do not limit them.
-
-## No Other Rights
-
-These terms do not allow you to sublicense or transfer any of your licenses to anyone else, or prevent the licensor from granting licenses to anyone else.  These terms do not imply any other licenses.
-
-## Patent Defense
-
-If you make any written claim that the software infringes or contributes to infringement of any patent, your patent license for the software granted under these terms ends immediately. If your company makes such a claim, your patent license ends immediately for work on behalf of your company.
-
-## Violations
-
-The first time you are notified in writing that you have violated any of these terms, or done anything with the software not covered by your licenses, your licenses can nonetheless continue if you come into full compliance with these terms, and take practical steps to correct past violations, within 32 days of receiving notice.  Otherwise, all your licenses end immediately.
-
-## No Liability
-
-***As far as the law allows, the software comes as is, without any warranty or condition, and the licensor will not be liable to you for any damages arising out of these terms or the use or nature of the software, under any kind of legal claim.***
-
-## Definitions
-
-The **licensor** is the individual or entity offering these terms, and the **software** is the software the licensor makes available under these terms.
-
-**You** refers to the individual or entity agreeing to these terms.
-
-**Your company** is any legal entity, sole proprietorship, or other kind of organization that you work for, plus all organizations that have control over, are under the control of, or are under common control with that organization.  **Control** means ownership of substantially all the assets of an entity, or the power to direct its management and policies by vote, contract, or otherwise.  Control can be direct or indirect.
-
-**Your licenses** are all the licenses granted to you for the software under these terms.
-
-**Use** means anything you do with the software requiring one of your licenses.
+九、既有授权与版本
+本协议适用于包含本协议的版本，不自动撤销他人就旧版本已合法取得的许可，也不改变另行有效的书面授权。旧版本与新版本须分别依据各自有效的授权条件使用。
