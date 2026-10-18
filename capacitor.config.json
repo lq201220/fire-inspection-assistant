@@ -1,0 +1,12 @@
+{
+  "appId": "cn.fireassistant.mobile",
+  "appName": "防消助手",
+  "webDir": "dist-app",
+  "server": {
+    "androidScheme": "http",
+    "cleartext": true
+  },
+  "android": {
+    "backgroundColor": "#f6f7f9"
+  }
+}

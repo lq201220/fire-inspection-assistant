@@ -1,0 +1,284 @@
+{
+  "user": {
+    "name": "田博",
+    "role": "监督检查员",
+    "unit": "区消防救援大队"
+  },
+  "view": "home",
+  "taskId": null,
+  "unitId": null,
+  "phase": "prepare",
+  "modal": null,
+  "toast": "",
+  "query": "",
+  "taskFilter": "全部",
+  "tasks": [
+    {
+      "id": "XF-260830-01",
+      "unitId": "unit-01",
+      "status": "待检查",
+      "risk": "高风险关注",
+      "source": "设施异常触发",
+      "due": "今天 16:30",
+      "focus": [
+        "火灾自动报警系统故障",
+        "消防控制室履职核验"
+      ],
+      "progress": 0
+    },
+    {
+      "id": "XF-260830-02",
+      "unitId": "unit-02",
+      "status": "待检查",
+      "risk": "中风险关注",
+      "source": "季度抽查任务",
+      "due": "明天 10:00",
+      "focus": [
+        "疏散通道",
+        "消防设施维护记录"
+      ],
+      "progress": 0
+    },
+    {
+      "id": "XF-260829-17",
+      "unitId": "unit-03",
+      "status": "整改中",
+      "risk": "高风险关注",
+      "source": "隐患复查",
+      "due": "明天 14:00",
+      "focus": [
+        "室内消火栓箱组件缺失",
+        "整改材料复核"
+      ],
+      "progress": 100
+    },
+    {
+      "id": "XF-260827-06",
+      "unitId": "unit-04",
+      "status": "已完成",
+      "risk": "低风险",
+      "source": "随机抽查任务",
+      "due": "已归档",
+      "focus": [
+        "单位自查记录",
+        "安全出口"
+      ],
+      "progress": 100
+    }
+  ],
+  "units": [
+    {
+      "id": "unit-01",
+      "name": "清河实验学校",
+      "type": "学校",
+      "address": "清河街道 · 文昌路18号",
+      "risk": "高风险关注",
+      "issueCount": 2,
+      "updated": "12分钟前",
+      "people": "2,480人",
+      "buildings": "教学楼3栋 · 宿舍2栋"
+    },
+    {
+      "id": "unit-02",
+      "name": "嘉和中心商业综合体",
+      "type": "商业综合体",
+      "address": "滨江街道 · 江宁路66号",
+      "risk": "中风险关注",
+      "issueCount": 1,
+      "updated": "昨天 17:40",
+      "people": "日均约8,000人",
+      "buildings": "地上6层 · 地下2层"
+    },
+    {
+      "id": "unit-03",
+      "name": "锦绣家园小区",
+      "type": "住宅小区",
+      "address": "东城街道 · 望湖路9号",
+      "risk": "高风险关注",
+      "issueCount": 1,
+      "updated": "昨天 09:20",
+      "people": "1,120户",
+      "buildings": "高层住宅8栋"
+    },
+    {
+      "id": "unit-04",
+      "name": "云岸养老服务中心",
+      "type": "养老机构",
+      "address": "青山街道 · 松柏路3号",
+      "risk": "低风险",
+      "issueCount": 0,
+      "updated": "08月27日",
+      "people": "常住168人",
+      "buildings": "护理楼1栋"
+    }
+  ],
+  "checklists": {
+    "XF-260830-01": [
+      {
+        "id": "alarm",
+        "group": "消防设施",
+        "title": "火灾自动报警系统运行状态",
+        "tip": "核对主机运行、故障指示和近期维护记录",
+        "basis": "《消防设施通用规范》GB 55036—2022 · 设施运行状态核查",
+        "status": null
+      },
+      {
+        "id": "sprinkler",
+        "group": "消防设施",
+        "title": "自动喷水灭火系统及末端试水",
+        "tip": "检查阀门状态、压力显示和末端试水装置",
+        "basis": "《消防设施通用规范》GB 55036—2022 · 自动喷水灭火系统",
+        "status": null
+      },
+      {
+        "id": "hydrant",
+        "group": "消防设施",
+        "title": "室内消火栓及水泵接合器",
+        "tip": "核对组件完整性、可达性和标识情况",
+        "basis": "现行消防设施相关标准 · 室内消火栓系统",
+        "status": null
+      },
+      {
+        "id": "control-room",
+        "group": "消防安全管理",
+        "title": "消防控制室值班履职",
+        "tip": "核对人员在岗、持证、报警处置和交接班记录",
+        "basis": "消防控制室管理相关规定 · 值班履职核查",
+        "status": null
+      },
+      {
+        "id": "exit",
+        "group": "建筑与疏散",
+        "title": "安全出口和疏散通道",
+        "tip": "检查出口开启、通道畅通、疏散指示和应急照明",
+        "basis": "《建筑防火通用规范》GB 55037—2022 · 疏散条件核查",
+        "status": null
+      },
+      {
+        "id": "management",
+        "group": "消防安全管理",
+        "title": "单位日常防火检查与演练",
+        "tip": "查看巡查、培训、演练和隐患整改记录",
+        "basis": "单位消防安全管理职责 · 履职记录核查",
+        "status": null
+      }
+    ],
+    "XF-260830-02": [
+      {
+        "id": "mall-exit",
+        "group": "建筑与疏散",
+        "title": "疏散通道及安全出口",
+        "tip": "抽查重点楼层和人员密集区域",
+        "basis": "《建筑防火通用规范》GB 55037—2022 · 疏散条件核查",
+        "status": null
+      },
+      {
+        "id": "mall-record",
+        "group": "消防安全管理",
+        "title": "消防设施维护保养记录",
+        "tip": "核对最近一次检测、故障处理和复查记录",
+        "basis": "消防设施维护管理相关要求 · 记录核查",
+        "status": null
+      },
+      {
+        "id": "mall-fire-door",
+        "group": "建筑与疏散",
+        "title": "防火门及防火分隔",
+        "tip": "检查闭门器、顺序器和常闭状态",
+        "basis": "建筑防火相关标准 · 防火分隔核查",
+        "status": null
+      },
+      {
+        "id": "mall-control",
+        "group": "消防安全管理",
+        "title": "消防控制室值班履职",
+        "tip": "检查值班人员和报警处置记录",
+        "basis": "消防控制室管理相关规定 · 值班履职核查",
+        "status": null
+      }
+    ],
+    "XF-260829-17": [
+      {
+        "id": "community-hydrant",
+        "group": "消防设施",
+        "title": "室内消火栓箱组件",
+        "tip": "复核缺失组件是否补齐并恢复可用",
+        "basis": "消防设施相关标准 · 室内消火栓系统",
+        "status": "pending"
+      },
+      {
+        "id": "community-access",
+        "group": "灭火救援条件",
+        "title": "消防车道和登高操作场地",
+        "tip": "核对占用整改和现场通行条件",
+        "basis": "建筑防火相关标准 · 消防车道核查",
+        "status": "normal"
+      }
+    ],
+    "XF-260827-06": [
+      {
+        "id": "care-exit",
+        "group": "建筑与疏散",
+        "title": "安全出口和疏散通道",
+        "tip": "检查出口、通道和疏散指示",
+        "basis": "《建筑防火通用规范》GB 55037—2022 · 疏散条件核查",
+        "status": "normal"
+      },
+      {
+        "id": "care-record",
+        "group": "消防安全管理",
+        "title": "单位自查记录",
+        "tip": "抽查巡查记录和隐患闭环情况",
+        "basis": "单位消防安全管理职责 · 履职记录核查",
+        "status": "normal"
+      }
+    ]
+  },
+  "issues": [
+    {
+      "id": "issue-01",
+      "taskId": "XF-260829-17",
+      "itemId": "community-hydrant",
+      "unitId": "unit-03",
+      "title": "室内消火栓箱内水带缺失",
+      "location": "1号楼一层东侧",
+      "finding": "现场复核发现组件尚未补齐，暂不具备完整使用条件。",
+      "status": "整改中",
+      "createdAt": "08月29日 09:20",
+      "confirmed": true,
+      "photo": null
+    }
+  ],
+  "events": [
+    {
+      "id": "event-01",
+      "unitId": "unit-01",
+      "title": "报警系统故障提示",
+      "detail": "人工录入的设施异常线索，尚未现场核验",
+      "state": "待核验",
+      "level": "high",
+      "time": "今天 09:42",
+      "taskId": "XF-260830-01"
+    },
+    {
+      "id": "event-02",
+      "unitId": "unit-01",
+      "title": "消防控制室履职异常提示",
+      "detail": "人工录入的值班异常线索，尚未现场核验",
+      "state": "待核验",
+      "level": "high",
+      "time": "今天 09:46",
+      "taskId": "XF-260830-01"
+    },
+    {
+      "id": "event-03",
+      "unitId": "unit-03",
+      "title": "消火栓组件缺失",
+      "detail": "现场核验确认，整改材料待复核",
+      "state": "整改中",
+      "level": "high",
+      "time": "昨天 09:20",
+      "taskId": "XF-260829-17"
+    }
+  ]
+}

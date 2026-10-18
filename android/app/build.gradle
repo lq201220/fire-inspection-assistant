@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+def hostedUrl = System.getenv('APP_WEB_URL') ?: providers.gradleProperty('appWebUrl').orNull
+if (!hostedUrl || !(hostedUrl ==~ /https?:\/\/[A-Za-z0-9.:-]+\//)) {
+    throw new GradleException('Set APP_WEB_URL or -PappWebUrl to the target http(s) origin ending in /.')
+}
+def hostedUri = new URI(hostedUrl)
+if (!hostedUri.host) throw new GradleException('APP_WEB_URL must contain a valid host.')
+def networkResources = layout.buildDirectory.dir('generated/appNetwork/res')
+def generateAppNetworkConfig = tasks.register('generateAppNetworkConfig') {
+    inputs.property('hostedUrl', hostedUrl)
+    outputs.dir(networkResources)
+    doLast {
+        def target = networkResources.get().file('xml/network_security_config.xml').asFile
+        target.parentFile.mkdirs()
+        def domains = ['localhost']
+        if (hostedUri.scheme == 'http' && hostedUri.host != 'localhost') domains.add(hostedUri.host)
+        target.setText('''<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+''' + domains.collect { '        <domain includeSubdomains="false">' + it + '</domain>\n' }.join('') + '''    </domain-config>
+</network-security-config>
+''', 'UTF-8')
+    }
+}
+
+android {
+    namespace = "cn.fireassistant.mobile"
+    compileSdk = rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "cn.fireassistant.mobile"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 3
+        versionName "1.0.2"
+        buildConfigField 'String', 'APP_WEB_URL', '"' + hostedUrl + '"'
+        aaptOptions {
+             // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
+             // Default: https://android.googlesource.com/platform/frameworks/base/+/282e181b58cf72b6ca770dc7ca5f91f135444502/tools/aapt/AaptAssets.cpp#61
+            ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
+        }
+    }
+    buildFeatures { buildConfig true }
+    sourceSets.main.res.srcDir(networkResources)
+    signingConfigs {
+        release {
+            if (System.getenv('ANDROID_KEYSTORE')) {
+                storeFile file(System.getenv('ANDROID_KEYSTORE'))
+                storePassword System.getenv('ANDROID_STORE_PASSWORD')
+                keyAlias 'fire-assistant'
+                keyPassword System.getenv('ANDROID_KEY_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        release {
+            if (System.getenv('ANDROID_KEYSTORE')) signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    flatDir{
+        dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:$androidxCoordinatorLayoutVersion"
+    implementation "androidx.core:core-splashscreen:$coreSplashScreenVersion"
+    implementation project(':capacitor-android')
+    implementation project(':capacitor-cordova-android-plugins')
+}
+
+apply from: 'capacitor.build.gradle'
+tasks.named('preBuild').configure { dependsOn(generateAppNetworkConfig) }
+
+try {
+    def servicesJSON = file('google-services.json')
+    if (servicesJSON.text) {
+        apply plugin: 'com.google.gms.google-services'
+    }
+} catch(Exception e) {
+    logger.info("google-services.json not found, google-services plugin not applied. Push Notifications won't work")
+}
